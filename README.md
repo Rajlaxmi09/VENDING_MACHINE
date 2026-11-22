@@ -87,30 +87,4 @@ the `balance`, `tea`, `coffee`, and `milk` outputs.
 
 ---
 
-## Getting Started (Vivado)
 
-1. Create a new RTL project targeting your FPGA part (or the same
-   `xc7a35tcpg236-1` used here).
-2. Add `vending_machine.v` as a design source.
-3. Add `vending_machine_tb.v` as a simulation source and set it as the
-   simulation top module.
-4. Run **Run Simulation → Run Behavioral Simulation** to view the waveform.
-5. Run **Synthesis** to generate the RTL schematic and utilization report.
-
----
-
-## Possible Extensions
-
-- Guard against re-dispensing while a selection is still held (require
-  `select_product` to return to idle before re-arming).
-- Add a 7-segment display driver to show live balance on hardware.
-- Map outputs to onboard LEDs for a physical FPGA board demo (e.g., Basys3).
-- Add support for coin-return / cancel functionality.
-
----
-
-## Author
-
-Designed and independently implemented as a personal RTL design project to
-practice FSM design, datapath implementation, and functional verification
-in Verilog / Vivado.
