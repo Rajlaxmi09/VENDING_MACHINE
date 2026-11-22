@@ -1,29 +1,5 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////
-// vending_machine.v
-//
-// RECONSTRUCTED from schematic + simulation waveform after the original
-// source was accidentally deleted. Assumptions made during reconstruction
-// (change these constants if they don't match the original design):
-//
-//   select_product encoding : 2'b01 = Tea, 2'b10 = Coffee, 2'b11 = Milk,
-//                              2'b00 = no selection (idle)
-//   TEA_PRICE    = 10
-//   COFFEE_PRICE = 15
-//   MILK_PRICE   = 5
-//
-// Behavior:
-//   - money + extra_money are summed each cycle (total_i, matches the
-//     RTL_ADD block seen in the schematic).
-//   - Once a product is selected, the FSM waits (accumulating balance)
-//     until enough money has been inserted (RTL_GEQ comparators), then
-//     moves to a one-cycle DISPENSE state.
-//   - In DISPENSE state the corresponding output pulses high for one
-//     clock, balance is updated to reflect any change (RTL_SUB), and the
-//     machine returns to IDLE with balance cleared on the next cycle.
-//   - reset is asynchronous and returns the FSM to IDLE (matches the
-//     RTL_REG_ASYNC block on state_reg in the schematic).
-//////////////////////////////////////////////////////////////////////////////
+
 
 module vending_machine (
     input  wire       clk,
