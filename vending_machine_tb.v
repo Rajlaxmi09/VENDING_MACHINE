@@ -1,18 +1,5 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////
-// vending_machine_tb.v
-//
-// Testbench reconstructed to mirror the stimulus style visible in the
-// original simulation waveform: an initial reset pulse, followed by a
-// sequence of money insertions and product selections, with 100 ns
-// timesteps and a 10 ns period clock.
-//
-// NOTE: exact stimulus values from the deleted original testbench could
-// not be recovered - this reproduces the same *style* of test (money
-// build-up over several cycles, each of the three products selected,
-// leftover balance/change observed) so you can re-verify behavior and
-// tweak values to match what you remember of the original.
-//////////////////////////////////////////////////////////////////////////////
+
 
 module vending_machine_tb;
 
